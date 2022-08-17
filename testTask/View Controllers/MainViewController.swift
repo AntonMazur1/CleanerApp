@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         activateConstraints()
+        configureItems()
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,10 +62,11 @@ class MainViewController: UIViewController {
         constraints.append(backgroundBubbleImage.widthAnchor.constraint(equalTo: view.widthAnchor))
         constraints.append(backgroundBubbleImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6))
         
-        constraints.append(storageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
+        constraints.append(storageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0))
         constraints.append(storageView.centerXAnchor.constraint(equalTo: view.centerXAnchor))
-        constraints.append(storageView.widthAnchor.constraint(equalToConstant: 230))
-        constraints.append(storageView.heightAnchor.constraint(equalToConstant: 230))
+//        constraints.append(storageView.widthAnchor.constraint(equalToConstant: 230))
+        constraints.append(storageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6))
+        constraints.append(storageView.heightAnchor.constraint(equalTo: storageView.widthAnchor))
         
         constraints.append(securityView.centerXAnchor.constraint(equalTo: view.centerXAnchor))
         constraints.append(securityView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -120))
@@ -98,6 +100,23 @@ class MainViewController: UIViewController {
         
         NSLayoutConstraint.activate(constraints)
     }
+}
+
+//MARK: - Customize Navigation Bar
+extension MainViewController {
     
+    
+    private func configureItems() {
+        let backItem = UIBarButtonItem()
+        backItem.image = UIImage(named: "backItem")
+        backItem.tintColor = .white
+        navigationItem.leftBarButtonItem = backItem
+        
+        let rightLabelItem = UIBarButtonItem()
+        rightLabelItem.title = "CLEANER"
+        rightLabelItem.tintColor = .white
+        
+        navigationItem.rightBarButtonItem = rightLabelItem
+    }
 }
 
