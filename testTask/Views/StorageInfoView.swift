@@ -132,16 +132,16 @@ class StorageInfoView: UIView {
         constraints.append(currentMemory.rightAnchor.constraint(equalTo: rightAnchor, constant: -30))
         
         constraints.append(totalMemory.topAnchor.constraint(equalTo: percent.topAnchor, constant: 60))
-        constraints.append(totalMemory.rightAnchor.constraint(equalTo: currentMemory.leftAnchor, constant: -10))
+        constraints.append(totalMemory.leftAnchor.constraint(equalTo: leftAnchor, constant: 15))
         
         constraints.append(currentAvailableMemory.topAnchor.constraint(equalTo: currentMemory.topAnchor, constant: 25))
         constraints.append(currentAvailableMemory.rightAnchor.constraint(equalTo: rightAnchor, constant: -35))
         
         constraints.append(availableMemory.topAnchor.constraint(equalTo: totalMemory.topAnchor, constant: 25))
-        constraints.append(availableMemory.rightAnchor.constraint(equalTo: currentAvailableMemory.leftAnchor, constant: -15))
+        constraints.append(availableMemory.leftAnchor.constraint(equalTo: leftAnchor, constant: 50))
         
         constraints.append(trashSize.topAnchor.constraint(equalTo: availableMemory.topAnchor, constant: 25))
-        constraints.append(trashSize.rightAnchor.constraint(equalTo: currentTrashSize.leftAnchor, constant: -4))
+        constraints.append(trashSize.leftAnchor.constraint(equalTo: leftAnchor, constant: 40))
         
         constraints.append(currentTrashSize.topAnchor.constraint(equalTo: currentAvailableMemory.topAnchor, constant: 25))
         constraints.append(currentTrashSize.rightAnchor.constraint(equalTo: rightAnchor, constant: -35))

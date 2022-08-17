@@ -62,9 +62,8 @@ class MainViewController: UIViewController {
         constraints.append(backgroundBubbleImage.widthAnchor.constraint(equalTo: view.widthAnchor))
         constraints.append(backgroundBubbleImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6))
         
-        constraints.append(storageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0))
+        constraints.append(storageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
         constraints.append(storageView.centerXAnchor.constraint(equalTo: view.centerXAnchor))
-//        constraints.append(storageView.widthAnchor.constraint(equalToConstant: 230))
         constraints.append(storageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6))
         constraints.append(storageView.heightAnchor.constraint(equalTo: storageView.widthAnchor))
         
@@ -94,7 +93,7 @@ class MainViewController: UIViewController {
         constraints.append(duplicateContacts.heightAnchor.constraint(equalToConstant: 120))
         
         constraints.append(duplicateScreenshots.centerXAnchor.constraint(equalTo: view.centerXAnchor))
-        constraints.append(duplicateScreenshots.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -260))
+        constraints.append(duplicateScreenshots.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -255))
         constraints.append(duplicateScreenshots.widthAnchor.constraint(equalToConstant: 120))
         constraints.append(duplicateScreenshots.heightAnchor.constraint(equalToConstant: 120))
         
