@@ -104,18 +104,22 @@ class MainViewController: UIViewController {
 //MARK: - Customize Navigation Bar
 extension MainViewController {
     
-    
     private func configureItems() {
         let backItem = UIBarButtonItem()
         backItem.image = UIImage(named: "backItem")
         backItem.tintColor = .white
         navigationItem.leftBarButtonItem = backItem
         
-        let rightLabelItem = UIBarButtonItem()
-        rightLabelItem.title = "CLEANER"
-        rightLabelItem.tintColor = .white
+        let cleanerLogo = UIImageView()
+        cleanerLogo.image = UIImage(named: "cleanerLogo")
+        let cleanerLogoItem = UIBarButtonItem(customView: cleanerLogo)
         
-        navigationItem.rightBarButtonItem = rightLabelItem
+        let cleanerLabel = UILabel()
+        cleanerLabel.text = "CLEANER"
+        cleanerLabel.textColor = .white
+        let cleanerLabelItem = UIBarButtonItem(customView: cleanerLabel)
+        
+        navigationItem.rightBarButtonItems = [cleanerLabelItem, cleanerLogoItem]
     }
 }
 
